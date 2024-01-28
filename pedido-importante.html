@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido</title>
+
+    <style>
+        body {
+            background-color: #ffc0cb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #msg {
+            text-align: center;
+            font-size: large;
+        }
+
+        #btsim, #btnao {
+            cursor: pointer;
+            padding: 10px 20px; /* Adiciona um espaçamento interno aos botões */
+            font-size: large; /* Tamanho da fonte nos botões */
+            margin: 10px; /* Adiciona margem aos botões para espaçamento */
+            border: none; /* Remove a borda padrão dos botões */
+            border-radius: 5px; /* Adiciona bordas arredondadas aos botões */
+            color: #000000; /* Cor do texto nos botões */
+        }
+
+        #btsim {
+            background-color: #4CAF50;
+        }
+        #btnao {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+    <div id="msg">
+        <p>Aceita namorar comigop?</p>
+        <button id="btsim" onclick="window.location.href='https://www.youtube.com/watch?v=lMl1UFfBp1U'">Sim</button>
+        <button id="btnao" onmouseenter="reposicionabt()" style="position: absolute;">Não</button>
+    </div>
+    <script>
+        function reposicionabt(){
+            const btnao = document.getElementById('btnao'); // Obtém o elemento
+
+            // Gera novas posições X e Y na tela
+            const posiX = Math.random() * (window.innerWidth - btnao.offsetWidth);
+            const posiY = Math.random() * (window.innerHeight - btnao.offsetHeight);
+
+            btnao.style.left = posiX + 'px';
+            btnao.style.top = posiY + 'px';  
+        }
+    </script>
+
+</body>
+</html>
